@@ -53,7 +53,6 @@ namespace YanmaYakitlar_01
             {
                 dosyaYolu = txt_dosyaYolu.Text; //Dosya yolunu al
 
-
                 var veriler = System.IO.File.ReadAllLines(@dosyaYolu); //txt dosyasındaki tüm satırları oku
 
                 string[] duzenliVeriler = new string[veriler.Length];
@@ -84,7 +83,6 @@ namespace YanmaYakitlar_01
                     }
                 }
 
-                //
                 double istenenSicaklik = 0;
                 if (textBox1.Text != null && textBox1.Text != "" && textBox1.Text != " ")
                 {
@@ -186,7 +184,6 @@ namespace YanmaYakitlar_01
                             lst_elementAdi.Items.Add(okunanElementAdi);
                         }
 
-
                         if (istenenSicaklik >= dusukSicaklik && istenenSicaklik <= 1000) //DÜŞÜK SICAKLIK İŞLEMLERİ
                         {
                             T = (decimal)istenenSicaklik;
@@ -198,7 +195,6 @@ namespace YanmaYakitlar_01
                             a12 = sayisalVerilerExp[11];
                             a13 = sayisalVerilerExp[12];
                             a14 = sayisalVerilerExp[13];
-
 
                             if (istenenFormul == "Özgül Isı (Cp)")
                             {
@@ -301,6 +297,7 @@ namespace YanmaYakitlar_01
                     }
                 }
 
+                //Katsayı değerlerini forma gönder
                 lst_a1.Items.Add(sayisalVerilerExp[0]);
                 lst_a2.Items.Add(sayisalVerilerExp[1]);
                 lst_a3.Items.Add(sayisalVerilerExp[2]);
@@ -322,7 +319,7 @@ namespace YanmaYakitlar_01
             }
 
 
-        }//hesapla butonu bitişi
+        }//Hesapla butonu bitişi
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
